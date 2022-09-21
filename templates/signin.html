@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <input type="text" placeholder="username" name="username"/>
+      <input type="password" placeholder="password" id = "pass" name="pass"/>
+      <input type="password" placeholder="re-password" id ="repass" name="repass"/>
+      <button onclick="checkLogin();" id="signButton"><a href="./profile.html">sign-in</a></button>
+			<p style="color: black;font-size: 30px;text-align: center;"></p>
+    </form>
+  </div>
+</div>
+</body>
+<script>
+document.getElementById("signButton").onclick = function checkLogin(){
+  var pass = document.getElementById("pass").value;
+  var repass = document.getElementById("repass").value;
+  if(pass == repass){
+    location.href="./profile.html";
+  }
+  
+}
+
+</script>
+</html>
+
+
